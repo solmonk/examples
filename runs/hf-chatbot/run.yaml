@@ -16,10 +16,10 @@ run:
       pip install autoawq>=0.2.6  # Install AutoAWQ separately to avoid conflicts
       pip install -r requirements.txt
       pip install flash-attn>=2.6.3
-    workdir: /code/hf-chatbot
+    workdir: /code/runs/hf-chatbot
   - command: |
       python app.py --model-id $MODEL_ID --use-vllm
-    workdir: /code/hf-chatbot
+    workdir: /code/runs/hf-chatbot
 ports:
   - name: gradio
     type: http
