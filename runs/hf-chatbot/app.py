@@ -8,7 +8,7 @@ import gradio as gr
 from transformers import AutoTokenizer
 
 class LLMChatHandler():
-  def __init__(self, model_id: str, use_vllm: bool = False, dtype: str = "auto"):
+    def __init__(self, model_id: str, use_vllm: bool = False, dtype: str = "auto"):
         self.use_vllm = use_vllm
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.terminators = [
